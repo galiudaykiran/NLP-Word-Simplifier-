@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Simplifier - Simplify Complex Text</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Word Simplifier</h1>
+            <p class="subtitle">Transform complex sentences into simple, easy-to-understand language</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="inputText">Enter your complex text:</label>
+                <textarea 
+                    id="inputText" 
+                    placeholder="Paste or type your complex text here...&#10;&#10;Example: The implementation of this sophisticated algorithm necessitates a comprehensive understanding of computational complexity theory."
+                    rows="8"
+                ></textarea>
+                <button id="simplifyBtn" class="btn-primary">
+                    <span class="btn-text">Simplify Text</span>
+                    <span class="btn-loader" style="display: none;">⏳ Simplifying...</span>
+                </button>
+            </div>
+
+            <div class="output-section" id="outputSection" style="display: none;">
+                <div class="comparison-container">
+                    <div class="text-box original">
+                        <h3>Original Text</h3>
+                        <div id="originalText" class="text-content"></div>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="text-box simplified">
+                        <h3>Simplified Text</h3>
+                        <div id="simplifiedText" class="text-content"></div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="copyBtn" class="btn-secondary">📋 Copy Simplified Text</button>
+                    <button id="newTextBtn" class="btn-secondary">🔄 Simplify New Text</button>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+        </main>
+
+        <footer>
+            <p>Powered by Word Simplifier AI</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
